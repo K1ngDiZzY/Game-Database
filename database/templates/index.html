@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title>Games List</title>
+</head>
+<body>
+<script>
+    // Refresh the page every 5 min (300000 milliseconds)
+    setTimeout(function() {
+        window.location.reload();
+    }, 300000);
+</script>
+
+    <h1>Games List</h1>
+    <table border="1">
+        <tr>
+            <th>Game Name</th>
+            <th>Release Date</th>
+            <th>Active Players</th>
+        </tr>
+        {% for game in games %}
+        <tr>
+            <td>{{ game[1] }}</td>
+            <td>{{ game[3] }}</td>
+            <td>{{ game[4] }} players</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <button onclick="window.location.href='{{ url_for('add_game') }}'">Add a new game</button>
+</body>
+</html>
+
+

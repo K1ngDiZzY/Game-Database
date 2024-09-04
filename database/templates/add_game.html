@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title>Add Game</title>
+</head>
+<body>
+    <h1>Add a New Game</h1>
+    <form method="POST">
+        <label for="game_name">Game Name:</label><br>
+        <input type="text" id="game_name" name="game_name" required><br>
+        <label for="app_id">App ID:</label><br>
+        <input type="number" id="app_id" name="app_id" required><br>
+        <label for="release_date">Release Date:</label><br>
+        <input type="date" id="release_date" name="release_date" required><br><br>
+        <input type="submit" value="Add Game">
+    </form>
+    <button onclick="window.location.href='{{ url_for('index') }}'">Back to Game list</button>
+</body>
+</html>
